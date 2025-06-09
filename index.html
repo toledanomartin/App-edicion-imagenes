@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editor de Colores de Imágenes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Editor de Colores de Imágenes</h1>
+        
+        <div class="upload-section">
+            <input type="file" id="imageInput" accept="image/*">
+            <label for="imageInput" class="upload-button">Seleccionar Imagen</label>
+        </div>
+
+        <div class="editor-section">
+            <div class="image-container">
+                <canvas id="imageCanvas"></canvas>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label for="brightness">Brillo:</label>
+                    <input type="range" id="brightness" min="0" max="200" value="100">
+                </div>
+
+                <div class="control-group">
+                    <label for="contrast">Contraste:</label>
+                    <input type="range" id="contrast" min="0" max="200" value="100">
+                </div>
+
+                <div class="control-group">
+                    <label for="saturation">Saturación:</label>
+                    <input type="range" id="saturation" min="0" max="200" value="100">
+                </div>
+
+                <div class="control-group">
+                    <label for="hue">Tono:</label>
+                    <input type="range" id="hue" min="0" max="360" value="0">
+                </div>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button id="resetButton">Restablecer</button>
+            <button id="downloadButton">Descargar Imagen</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
